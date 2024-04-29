@@ -33,3 +33,10 @@ def project(req: func.HttpRequest) -> func.HttpResponse:
         json.dumps(float(prediction[0])), 
         mimetype='text/json'
     )
+
+@app.route(route='pixee')
+def pixee(req: func.HttpRequest) -> func.HttpResponse:
+    return func.HttpResponse(
+        json.dumps('Test Pixee'),
+        mimetype='text/json'
+    )
